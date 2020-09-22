@@ -1,4 +1,11 @@
 # ASP.NET
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'MAIC - TEK Experts CR - v-ronc Group#2(bddf3c59-769c-49a7-a515-6310ce264e6a)'
+    appType: 'webApp'
+    WebAppName: 'IssueDeploymentCenter'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
